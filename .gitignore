@@ -1,0 +1,6 @@
+*.json
+.env
+__pycache__/
+token__.py
+__token.py
+test
