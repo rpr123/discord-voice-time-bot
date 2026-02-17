@@ -1,11 +1,15 @@
 import discord
 from discord.ext import commands,tasks
-from token__ import TOKEN, guild_id, channel,channel_settelment
-import datetime
 from datetime import datetime,time, timezone, timedelta
 from dcclass import membermanager,FILE_NAME,os
+import os
 
-
+from dotenv import load_dotenv
+load_dotenv()
+TOKEN = os.getenv('TOKEN')
+guild_id = int(os.getenv('guild_id'))
+channel = int(os.getenv('channel'))
+channel_settelment = int(os.getenv('channel_settelment'))
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents)
